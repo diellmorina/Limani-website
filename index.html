@@ -3,6 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0a0a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="app-icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="app-icon.svg">
 
 <title>Limani Studio | Photography & Production</title>
 
@@ -495,6 +501,7 @@ footer{
 <h2 data-i18n="contactTitle">Kontakti</h2>
 <p>+383 49 412 762</p>
 <p>fotolimani@hotmail.com</p>
+<p data-i18n="addressText">Adresa: Foto Producent Limani, Rahovec, Kosove</p>
 </div>
 <div class="contact-form">
 <form action="https://formspree.io/f/xzdkevre" method="POST">
@@ -544,6 +551,7 @@ portfolioTitle:'Portfolio',
 ctaTitle:'Gati Te Punoni Me Ne?',
 contactNow:'Na Kontaktoni',
 contactTitle:'Kontakti',
+addressText:'Adresa: Foto Producent Limani, Ratkoc-Rahovec',
 namePlaceholder:'Emri',
 emailPlaceholder:'Email',
 phonePlaceholder:'Numri i telefonit (opsional)',
@@ -572,6 +580,7 @@ portfolioTitle:'Portfolio',
 ctaTitle:'Ready to Work With Us?',
 contactNow:'Contact Now',
 contactTitle:'Contact',
+addressText:'Address: Foto Producent Limani, Rahovec, Kosovo',
 namePlaceholder:'Name',
 emailPlaceholder:'Email',
 phonePlaceholder:'Phone number (optional)',
@@ -663,6 +672,16 @@ function openUpload(){
       document.querySelector(".gallery").appendChild(img);
     }
   });
+}
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+window.addEventListener('load', () => {
+navigator.serviceWorker.register('sw.js').catch(() => {
+// Ignore registration errors and keep site functionality unchanged.
+});
+});
 }
 </script>
 
