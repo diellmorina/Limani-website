@@ -1,0 +1,38 @@
+SETUP - Limani Studio Cloudinary + Firebase Firestore
+
+1) Firebase:
+- Authentication > Email/Password > Enable
+- Authentication > Users > Add user (email + password)
+- Firestore Database > Create database
+- Firestore Rules: copy from firebase-rules.txt
+
+2) Cloudinary:
+- Create account
+- Dashboard > copy Cloud name
+- Settings > Upload > Upload presets > Add upload preset
+- Signing mode: Unsigned
+- Folder: limani-gallery
+- Save, then copy preset name
+
+3) admin.html:
+Find these lines and replace them:
+const CLOUDINARY_CLOUD_NAME = "daz3ip3yw";
+const CLOUDINARY_UPLOAD_PRESET = "VENDOS_UPLOAD_PRESET";
+
+Example:
+const CLOUDINARY_CLOUD_NAME = "diell123";
+const CLOUDINARY_UPLOAD_PRESET = "limani_unsigned";
+
+4) Run:
+Use VS Code Live Server. Open admin.html, login, click "Hap Upload Widget".
+
+
+SECRET F9 UPLOAD:
+- Hape index.html me Live Server.
+- Shtyp F9 në keyboard.
+- Fut email/password të Firebase adminit.
+- Hapet Cloudinary Upload Widget.
+- Preset-i në index.html është vendosur si: limani_unsigned. Nëse emri yt është tjetër, ndrysho rreshtin CLOUDINARY_UPLOAD_PRESET.
+
+
+UPDATE: Ky version perdor Direct Cloudinary Upload API, jo widget. Nese upload ngec, kontrollo qe upload preset te jete Unsigned dhe emri ne kod te jete i sakte.
