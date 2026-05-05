@@ -1,0 +1,7 @@
+Nëse fotot nuk ruhen:
+
+1) Hap F12 > Console dhe shiko error-in e kuq.
+2) Nëse error thotë Cloudinary / preset: Cloudinary preset duhet të jetë Unsigned.
+3) Nëse error thotë Firebase / permission-denied: Firestore Rules nuk janë publish ose nuk je login me user në Authentication.
+4) Kontrollo Firebase > Firestore Database > Data: a krijohet collection photos?
+5) Mos e hap me file://, përdor Live Server.
